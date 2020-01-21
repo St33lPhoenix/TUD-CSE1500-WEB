@@ -1,0 +1,30 @@
+body {
+    padding: 50px;
+    font: 14px "Helvetica neue", "Helvetica", "Arial", "sans-serif";
+    background: rgb(128, 128, 128);
+    color: rgb(0, 0, 0);
+  }
+
+h1 {
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: gray;
+    background-color: darkgray;
+    text-align: center;
+}
+
+button:hover {
+    transition: background-color 2s;
+    background-color: rgb(64, 64, 64);
+}
+  
+button:active {
+    color: white;
+}

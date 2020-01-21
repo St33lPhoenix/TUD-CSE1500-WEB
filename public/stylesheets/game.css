@@ -1,9 +1,4 @@
-body {
-    padding: 50px;
-    font: 14px "Helvetica neue", "Helvetica", "Arial", "sans-serif";
-    background: rgb(128, 128, 128);
-    color: black;
-}
+@import "style.css";
 
 @keyframes animation2 {
     0% {color: red;}
@@ -14,8 +9,6 @@ body {
 }
 
 h1 {
-    font-size: 50px;
-    text-align: center;
     animation-name: animation2;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -41,6 +34,7 @@ p {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
+
 .Slot {
     margin-top: 5px;
     margin-left: 12%;
@@ -51,31 +45,6 @@ p {
     text-align: center;
     padding: .3rem;
     font-size: 3rem;
-}
-
-h1 {
-    font-size: 50px;
-    text-align: center;
-    color: black;
-}
-
-button {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-color: gray;
-    background-color: darkgray;
-    text-align: center;
-}
-
-button:hover {
-    transition: background-color 2s;
-    background-color: rgb(64, 64, 64);
-}
-
-button:active {
-    color: white;
 }
 
 h5 {
