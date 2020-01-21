@@ -8,6 +8,7 @@ const matrix = [
     ['Slot Slot-8', 'Slot Slot-9', 'Slot Slot-10', 'Slot Slot-11', 'Slot Slot-12', 'Slot Slot-13', 'Slot Slot-14'],
     ['Slot Slot-1', 'Slot Slot-2', 'Slot Slot-3', 'Slot Slot-4', 'Slot Slot-5', 'Slot Slot-6', 'Slot Slot-7']
 ];
+const song = new Audio('../images/winerr.mp3');
 
 var timer = null;
 var complete = false;
@@ -63,6 +64,7 @@ var complete = false;
                     document.getElementsByClassName(matrix[j][i])[0].onclick = function() {
                         let col = i;
                         if (timer != null) {
+                            song.play();
                             socket.send(JSON.stringify({type: 3, column: col}));
                         }
                     }

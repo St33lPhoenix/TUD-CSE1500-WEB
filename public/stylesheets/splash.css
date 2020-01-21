@@ -5,6 +5,58 @@ body {
   color: rgb(0, 0, 0);
 }
 
+h1 {
+  text-align: center;
+}
+
+.madeby {
+  position: relative;
+  left: 20px;
+  text-align: right;
+  font-size: 14px;
+}
+
+@keyframes animation {
+  0% {color: red;}
+  25% {color: yellow;}
+  50% {color: yellowgreen;}
+  75% {color: blue;}
+  100% {color: red;}
+}
+
+h4 {
+  animation-name: animation;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+
+h4::after {
+  content: "Meleon";
+}
+
+.Startbutton {
+  text-align: center;
+}
+
+button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: gray;
+  background-color: darkgray;
+  text-align: center;
+}
+
+button:hover {
+  transition: background-color 2s;
+  background-color: rgb(64, 64, 64);
+}
+
+button:active {
+  color: white;
+}
+
 a {
   color: black;
 }
@@ -13,29 +65,20 @@ a {
   text-align: center;
 }
 
-button {
-  border-color: gray;
-  background-color: darkgray;
-  text-align: center;
-}
-.Startbutton {
-  text-align: center;
-}
-button:hover {
-  background-color: rgb(172, 172, 172);
-}
-
-button:active {
-  color: white;
-}
-
-h1 {
-  text-align: center;
+.howto {
+  text-align: left;
 }
 
 h3 {
+  border-color: black;
+  padding: 10px;
+  border: solid;
   text-align: right;
   position: absolute;
   bottom: 0;
   right: 40px;
+}
+
+h3::before {
+  content: "Games";
 }

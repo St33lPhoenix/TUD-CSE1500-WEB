@@ -10,6 +10,9 @@ const game = require('./game.js');
 var port = 1111;
 var app = express();
 
+// Embedded javascript view engine
+app.set('view engine', 'ejs');
+
 app.use(express.static(__dirname + "/public"));
 
 // Set our router
@@ -67,7 +70,8 @@ socketserver.on('connection', function(ws) {
     var gameObj = sockets[con.id];
 
     if (!gameObj.isOver()) {
-      
+      st.gamesAbandoned++;
+
       // Close p1
       if (gameObj.p1 != null) {
         gameObj.p1.close();
