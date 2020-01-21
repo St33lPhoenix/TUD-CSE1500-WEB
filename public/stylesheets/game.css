@@ -5,6 +5,32 @@ body {
     color: black;
 }
 
+@keyframes animation2 {
+    0% {color: red;}
+    25% {color: orange;}
+    50% {color: yellow;}
+    75% {color: orange;}
+    100% {color: red;}
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    animation-name: animation2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+h2 {
+    font-size: xx-large;
+    text-align: center;
+}
+
+p {
+    position: relative;
+    left: 7%;
+}
+
 .Board {
     height: 700px;
     margin-left: 15%;
@@ -31,4 +57,36 @@ h1 {
     font-size: 50px;
     text-align: center;
     color: black;
+}
+
+button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-color: gray;
+    background-color: darkgray;
+    text-align: center;
+}
+
+button:hover {
+    transition: background-color 2s;
+    background-color: rgb(64, 64, 64);
+}
+
+button:active {
+    color: white;
+}
+
+h5 {
+    border: solid;
+    max-width: 170px;
+}
+
+h5::before {
+    content: "To";
+}
+
+h5::after {
+    content: "'esc'";
 }

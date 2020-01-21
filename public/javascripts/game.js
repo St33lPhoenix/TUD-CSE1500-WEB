@@ -13,6 +13,8 @@ const song = new Audio('../images/winerr.mp3');
 var timer = null;
 var complete = false;
 (function setup() {
+    testResolution();
+
     var socket = new WebSocket(socketUrl);
 
     // On message recieve
@@ -108,4 +110,47 @@ function setStatus(text, interrupt) {
 
 function setTile(row, column, color) {
     document.getElementsByClassName(matrix[row][column])[0].style.background = color;
+}
+
+// Resolution
+function testResolution() {
+  if (window.screen.availHeight < 768 || window.screen.availWidth < 1366) {
+    alert('Your resolution under too small, minumum: 1366x768');
+  } 
+}
+
+// Fullscreen
+var full = false;
+function toggleFullscreen() {
+    full = !full;
+    if (full) {
+        openFullscreen();
+        return;
+    }
+    closeFullscreen();
+}
+
+function openFullscreen() {
+  var elem = document.documentElement;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) { /* Firefox */
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
 }
