@@ -3,7 +3,7 @@ TU Delft WDT Web Assignment
 Course: TU Delft Course CSE1500 Web and Database Technology  
 Web assignment solution
 
-Use `npm start` to start the application
+Use `npm start` to start the application  
 The application depends on the following:
 * debug (~2.6.9)
 * ejs (~2.6.1)
