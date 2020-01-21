@@ -115,7 +115,7 @@ function setTile(row, column, color) {
 // Resolution
 function testResolution() {
   if (window.screen.availHeight < 768 || window.screen.availWidth < 1366) {
-    alert('Your resolution under too small, minumum: 1366x768');
+    alert('Your resolution is too small, minumum: 1366x768');
   } 
 }
 
