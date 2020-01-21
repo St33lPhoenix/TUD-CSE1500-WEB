@@ -1,0 +1,41 @@
+body {
+  padding: 50px;
+  font: 14px "Helvetica neue", "Helvetica", "Arial", "sans-serif";
+  background: rgb(128, 128, 128);
+  color: rgb(0, 0, 0);
+}
+
+a {
+  color: black;
+}
+
+.Splashimage {
+  text-align: center;
+}
+
+button {
+  border-color: gray;
+  background-color: darkgray;
+  text-align: center;
+}
+.Startbutton {
+  text-align: center;
+}
+button:hover {
+  background-color: rgb(172, 172, 172);
+}
+
+button:active {
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+}
