@@ -70,7 +70,10 @@ socketserver.on('connection', function(ws) {
     var gameObj = sockets[con.id];
 
     if (!gameObj.isOver()) {
-      st.gamesAbandoned++;
+      if (st.abandonedGameIdMap.indexOf(gameObj.id) == -1) {
+        st.abandonedGameIdMap.push(gameObj.id);
+        st.gamesAbandoned++;
+      }
 
       // Close p1
       if (gameObj.p1 != null) {
